@@ -1,10 +1,8 @@
+# Python
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
-*.so
 
 # Distribution / packaging
 .Python
@@ -26,6 +24,9 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# Tensorflow checkpoints
+*.hdf5
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -36,15 +37,23 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
+# Tarballs
+*.tgz
+
+# C extensions
+*.so
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
 .nox/
 .coverage
 .coverage.*
+.nyc_output
 .cache
 nosetests.xml
 coverage.xml
+coverage.lcov
 *.cover
 *.py,cover
 .hypothesis/
@@ -56,7 +65,6 @@ cover/
 *.pot
 
 # Django stuff:
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -172,3 +180,62 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Numerous always-ignore extensions
+*.bak
+*.patch
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+*.sass-cache
+*.lock
+*.rdb
+*.db
+nohup.out
+
+# OS or Editor folders
+.DS_Store
+._*
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+*.*-project
+*.*-workspace
+nbproject
+thumbs.db
+
+# Folders to ignore
+.hg
+.svn
+.CVS
+.idea
+node_modules
+old/
+*_old/
+no_track/
+*_no_track.*
+*.no_track.*
+no_track.*
+build/
+combo/
+reference/
+jscoverage_lib/
+temp/
+tmp/
+
+# Java
+.mvn
+.gradle
+.vscode
+.project
+.classpath
+/gradle

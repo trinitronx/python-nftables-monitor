@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-nftables-monitor"
+authors = [
+    {name = "James Cuzella", email = "james.cuzella@lyraphase.com"}
+]
+description = "Python script to monitor packet rates in nftables"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["python-nftables-monitor"]
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+]
+requires-python = ">=3.7"
+dynamic = ['version']
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/trinitronx/python-nftables-monitor"
+
+[project.optional-dependencies]
+dev = [
+    # "codecov",
+    "coverage",
+    "ruff",
+    "pytest",
+    # "pytest-asyncio",
+    "pytest-cov",
+    "twine",
+    "mypy",
+    "build"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "python_nftables_monitor.__version__"}
+
+[tool.setuptools.package-data]
+python_nftables_monitor = ["py.typed"]
+
+[tool.mypy]
+warn_return_any = true
+ignore_missing_imports = true
+no_implicit_optional = true
+strict_optional = true
